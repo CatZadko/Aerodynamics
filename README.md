@@ -50,7 +50,7 @@ Admin item distribution intentionally bypasses Survival progression. Regular pla
 | II | 14 |
 | III | 19 |
 | IV | 24 |
-| V | 72.7 |
+| V | 45 |
 
 Level V follows the latest technical requirement: the speed of a boat on blue ice.
 The original concept specified 30 blocks/s for level V. To restore that value, set `flight.speeds.'5'` to `30.0` and run `/aero reload`.
