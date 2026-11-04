@@ -1,0 +1,11 @@
+name: Aerodynamics
+version: '1.0.0'
+main: ru.miroslav.aerodynamics.AerodynamicsPlugin
+bootstrapper: ru.miroslav.aerodynamics.AeroBootstrap
+api-version: '26.3'
+description: Аэродинамика I–V для упряжки счастливого гаста
+authors: [Miroslav]
+permissions:
+  aerodynamics.admin:
+    description: Выдача предметов, диагностика и перезагрузка настроек
+    default: op

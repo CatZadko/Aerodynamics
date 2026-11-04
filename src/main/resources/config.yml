@@ -1,0 +1,67 @@
+# Все скорости — целевые б/с в установившемся горизонтальном полёте при 20 TPS.
+flight:
+  speeds:
+    '0': 5.0
+    '1': 10.0
+    '2': 14.0
+    '3': 19.0
+    '4': 24.0
+    # 72.7 — новое требование: скорость синего льда. Для прежнего баланса: 30.0.
+    '5': 45.0
+  # Калибровка ванильной физики; проверяется на горизонтальном полёте вперёд.
+  speed-calibration: 1.0
+  update-period-ticks: 2
+  acceleration-bps2: 6.0
+  deceleration-bps2: 16.0
+  lag-guard:
+    enabled: true
+    safe-speed-bps: 10.0
+    enter-tps: 18.0
+    exit-tps: 19.0
+    enter-mspt: 55.0
+    exit-mspt: 45.0
+    recovery-seconds: 8.0
+  chunk-guard:
+    enabled: true
+    # Проверяет готовые чанки, ничего принудительно не загружает.
+    lookahead-seconds: 2.0
+    max-lookahead-blocks: 192.0
+    # Дополнительно проверяет отправку чанков всем пассажирам.
+    require-sent-to-passengers: true
+
+acquisition:
+  table:
+    enabled: true
+    level-i: 0.08
+    level-ii: 0.02
+  ghast:
+    level-i: 0.04
+    level-ii: 0.004
+  phantom:
+    level-i: 0.005
+    level-ii: 0.0005
+  barter:
+    level-i: 0.004
+    level-ii: 0.001
+  villagers:
+    enabled: true
+    emeralds: 64
+    ghast-tears: 16
+    # Одна покупка за обычное пополнение запасов жителя (не за сутки).
+    max-uses: 1
+
+anvil:
+  merge-costs:
+    '2': 8
+    '3': 18
+    '4': 36
+  apply-costs:
+    '1': 4
+    '2': 6
+    '3': 8
+    '4': 10
+    '5': 12
+  rename-cost: 1
+
+items:
+  custom-model-data: 260301.0
